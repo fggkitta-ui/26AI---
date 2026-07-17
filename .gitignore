@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 运行时生成的数据，不提交到仓库
+data/*.db
+data/session_*.json
+outputs/*.docx
+
+# 保留目录结构占位文件
+!data/.gitkeep
+!outputs/.gitkeep
+
+# 敏感信息
+config/secrets.yaml
+.env

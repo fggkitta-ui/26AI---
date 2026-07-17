@@ -1,0 +1,19 @@
+# 数据源配置示例。
+# 实际项目中，adapter 的 BASE_URL / 检索参数等也可以从这里读取，
+# 而不是硬编码在各个 adapter 文件里，方便非开发人员调整。
+
+sources:
+  - name: 示例政府采购公示平台
+    adapter: gov_platform_adapter.GovPlatformAdapter
+    requires_login: false
+    enabled: true
+
+  - name: 示例需登录标讯网站
+    adapter: login_required_adapter.LoginRequiredAdapter
+    requires_login: true
+    enabled: true
+
+  - name: 示例行业聚合站点
+    adapter: aggregator_site_adapter.AggregatorSiteAdapter
+    requires_login: false
+    enabled: true
